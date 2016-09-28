@@ -12,7 +12,7 @@ var articles={
         sahkjhashasbkjhaj
         askjh `,
     },
-    'artcle-two' : {
+    'article-two' : {
         title :' abhis second article',
         heading :'this is my world',
         first :'ajhgvas',
