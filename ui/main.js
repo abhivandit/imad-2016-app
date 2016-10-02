@@ -4,9 +4,9 @@ element.innerHTML = 'ajhdajkhd';
 var myimg=document.getElementById('madi');
 var marginLeft=0;
 function moveRight(){
-    marginLeft=marginLeft + 1;
+  
     
-    myimg.style.marginLeft=marginLeft +'px';
+    myimg.style.marginLeft=(marginLeft + 1) +'px';
 }
 myimg.onclick = function(){
 var interval = setInterval(moveRight, 50);
