@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element=document.getElementById('mytext');
-element.innerHTML = 'ajhdajkhd';
+//element.innerHTML = 'ajhdajkhd';
 var myimg=document.getElementById('madi');
 var marginLeft=0;
 function moveRight(){
