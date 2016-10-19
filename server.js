@@ -81,7 +81,13 @@ app.get('/', function (req, res) {
 /*app.get('/article-three',function (req,res){
      res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });*/
-
+var counter =0;
+app.get('/counter',function(req,res){
+    counter=counter + 1;
+    res.send(counter.toString());//number cant be send aas a response
+    
+    
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
   
