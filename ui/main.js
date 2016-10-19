@@ -13,3 +13,11 @@ myimg.onclick = function(){
 var interval = setInterval(moveRight, 50);
     
 };
+var counter =0;
+var button=document.getElementById('counter');
+button.onclick = function(){
+    count=count+1;
+    var span=document.getElementById('count');
+    span.innerHTML=count.toString();
+    
+};
