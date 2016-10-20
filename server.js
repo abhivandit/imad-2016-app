@@ -90,8 +90,8 @@ app.get('/counter',function(req,res){
     
 });
 var names=[];
-app.get('/submit-name/:name',function(req,res){
-    var name=req.params.name;//we can use params too
+app.get('/submit-name',function(req,res){
+    var name=req.query.name;//we can use params too
     names.push(name);
     res.send(JSON.stringify(names));
     
