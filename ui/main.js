@@ -45,8 +45,9 @@ submit.onclick=function(){
         if(request.readyState==XMLHttpRequest.DONE){
             if(request.status==200){
            var names=request.responsetext;//vvi
-           var list="";
+           
            names=JSON.parse(names);//vvi
+           var list='';
            for(var i=0;i<names.length;i++){
                list+='<li>'+names[i]+'</li>';
                
