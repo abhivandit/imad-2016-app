@@ -20,9 +20,9 @@ button.onclick = function(){
     request.onReadyStateChange=function(){
         if(request.readyState==XMLHttpRequest.DONE){
             if(request.state==200){
-                var counter=request.responseText;
+                var k=request.responseText;
                  var span=document.getElementById('count');
-                span.innerHTML=counter.toString();
+                span.innerHTML=k.toString();
             }
         }
         
