@@ -83,8 +83,8 @@ app.get('/', function (req, res) {
 });*/
 var naems=[];
 app.get('/submit',function(req,res){
-    var givenname=req.query.givenname;//we can use params too
-    names.push(givenname);
+    var name=req.query.name;//we can use params too
+    names.push(name);
     res.send(JSON.stringify(names));
     
     
