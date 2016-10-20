@@ -37,17 +37,33 @@ button.onclick = function(){
 var names=[];
 var i=0;
 
+var list="";
 var submit=document.getElementById('submit');
 submit.onclick=function(){
-    var namek=document.getElementById('name');
-     names[i] = namek.value;
-     var list=document.getElementById('mylist');
-   i++;
+        var request=new XMLHttpRequest();
+    request.onreadystatechange=function(){
+        if(request.readyState==XMLHttpRequest.DONE){
+            if(request.status==200){
+           var names=request.responsetext;//vvi
+           names=JSON.parse(names);//vvi
+           for(i=0;i<names.length;i++){
+               list+='<li>'+names[i]+'</li>';
+               
+           }
+             var klist=document.getElementById('mylist');
+             klist.innerHTML=list;
+     
+            }
+        }
+    };
+ 
+ 
+    var namek=document.getElementById('name');//were using ajax cz kb tk lega input uske lye kch nhi pta
+    var name=namek.value;
+    request.open('GET','http://abhivandit.imad.hasura-app.io/submit?givenname' +name,true);
+    request.send(null);
+   
+   
     
     
 };
-for(i=0;i<names.length;i++)
-{
-     var list=document.getElementById('mylist');
-     list.innerHTML='<li>'+ names[i]+'</li>';
-}
