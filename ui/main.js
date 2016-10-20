@@ -42,9 +42,9 @@ var submit=document.getElementById('submit');
 submit.onclick=function(){
         var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
-        if(request.readyState==XMLHttpRequest.DONE){
-            if(request.status==200){
-           var names=request.responsetext;//vvi
+        if(request.readyState===XMLHttpRequest.DONE){
+            if(request.status===200){
+           var names=request.responseText;//vvi
            
            names=JSON.parse(names);//vvi
            var list='';
@@ -65,7 +65,7 @@ submit.onclick=function(){
    /* var list="";
     list=document.getElementById('mylist');
     list.innerHTML='<li>'+name+'</li>';*/
-    request.open('GET','http://abhivandit.imad.hasura-app.io/submit?name=' +name,true);
+    request.open('GET','http://abhivandit.imad.hasura-app.io/submit-name?name=' +name,true);
     request.send(null);
    
    
