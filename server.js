@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
 /*app.get('/article-three',function (req,res){
      res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });*/
-var naems=[];
+var names=[];
 app.get('/submit',function(req,res){
     var name=req.query.name;//we can use params too
     names.push(name);
