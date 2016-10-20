@@ -40,7 +40,7 @@ button.onclick = function(){
 
 var submit=document.getElementById('submit');
 submit.onclick=function(){
-        var request=new XMLHttpRequest();
+     /*   var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readyState==XMLHttpRequest.DONE){
             if(request.status==200){
@@ -57,13 +57,16 @@ submit.onclick=function(){
      
             }
         }
-    };
+    };*/
  
  
     var namek=document.getElementById('name');//were using ajax cz kb tk lega input uske lye kch nhi pta
     var name=namek.value;
-    request.open('GET','http://abhivandit.imad.hasura-app.io/submit?name=' +name,true);
-    request.send(null);
+    var list="";
+    list=document.getElementById('mylist');
+    list.innerHTML='<li>'+name+'</li>';
+    //request.open('GET','http://abhivandit.imad.hasura-app.io/submit?name=' +name,true);
+    //request.send(null);
    
    
     
