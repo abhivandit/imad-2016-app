@@ -60,7 +60,7 @@ submit.onclick=function(){
  
     var namek=document.getElementById('name');//were using ajax cz kb tk lega input uske lye kch nhi pta
     var name=namek.value;
-    request.open('GET','http://abhivandit.imad.hasura-app.io/submit?name' +name,true);
+    request.open('GET','http://abhivandit.imad.hasura-app.io/submit?name=' +name,true);
     request.send(null);
    
    
