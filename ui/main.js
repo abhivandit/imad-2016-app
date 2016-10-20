@@ -34,3 +34,17 @@ button.onclick = function(){
    
     
 };
+var names=[];
+var i=0;
+
+var submit=document.getElementById('submit');
+submit.onclick=function(){
+    var namek=document.getElementById('name');
+     names[i] = namek.value;
+     var list=document.getElementById('mylist');
+     mylist.innerHTML='<li>' + names[i] + '</li>';
+     i++;
+     
+    
+    
+};
