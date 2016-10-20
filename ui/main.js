@@ -17,9 +17,9 @@ var interval = setInterval(moveRight, 50);
 var button=document.getElementById('counter');
 button.onclick = function(){
     var request=new XMLHttpRequest();
-    request.onReadyStateChange=function(){
+    request.onreadystatechange=function(){
         if(request.readyState==XMLHttpRequest.DONE){
-            if(request.state==200){
+            if(request.status==200){
                 var k=request.responseText;
                  var span=document.getElementById('count');
                 span.innerHTML=k.toString();
