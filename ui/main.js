@@ -29,6 +29,8 @@ button.onclick = function(){
         
     };
   //  counter=counter+1;
+  request.open('http://abhivandit.imad.hasura-app.io/counter',true);
+  request.send(null);
    
     
 };
