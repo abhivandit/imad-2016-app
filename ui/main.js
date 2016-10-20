@@ -42,9 +42,12 @@ submit.onclick=function(){
     var namek=document.getElementById('name');
      names[i] = namek.value;
      var list=document.getElementById('mylist');
-     mylist.innerHTML='<li>' + names[i] + '</li>';
-     i++;
-     
+   i++;
     
     
 };
+for(i=0;i<names.length;i++)
+{
+     var list=document.getElementById('mylist');
+     list.innerHTML='<li>'+ names[i]+'</li>';
+}
